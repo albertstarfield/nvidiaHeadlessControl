@@ -4,7 +4,7 @@
 AllocatedDisplayNumber=:69
 offsetCoreClock=301 #GPU Core Clock in MHz
 offsetMemoryClock=502 #Memory Offset Clock in MHz
-
+displayManager=gdm
 #==================================================
 
 
@@ -86,7 +86,7 @@ X ${AllocatedDisplayNumber} &
 sleep 1
 rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
 sleep 5
-systemctl restart gdm
+systemctl restart ${displayManager}
 x11vnc -ncache_cr -o $(pwd)/virtualCoolbitFramebuffer.log -ncache 10 -display ${AllocatedDisplayNumber}
 holdFunction
 rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
