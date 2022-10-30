@@ -38,4 +38,8 @@ Side note : the config file will auto regenerate each boot, so you don't need to
 
 > I love challenges <3 that why i'm able to overclock nvidia gpu even by using wayland, ehe~ 
 
+There is alternative which i just found
+1. https://forums.developer.nvidia.com/t/option-coolbits-is-not-used-optimus-enabled-laptop-running-an-rtx-2070-manjaro-linux/111771/14 made by 
+hexengraf
+
 
