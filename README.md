@@ -32,6 +32,8 @@ This utility allows to control the hardware parameters (which allows you to over
 3. https://wiki.archlinux.org/title/NVIDIA/Tips_and_tricks
 4. https://unix.stackexchange.com/questions/559918/how-to-add-virtual-monitor-with-nvidia-proprietary-driver
 5. https://github.com/NVIDIA/nvidia-settings/issues/65#issuecomment-840205288
-6. 
+
+
+> I love challenges <3 that why i'm able to overclock nvidia gpu even by using wayland, ehe~ 
 
 
