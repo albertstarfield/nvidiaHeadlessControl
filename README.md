@@ -40,6 +40,7 @@ Side note : the config file will auto regenerate each boot, so you don't need to
 
 There is alternative which i just found
 1. https://forums.developer.nvidia.com/t/option-coolbits-is-not-used-optimus-enabled-laptop-running-an-rtx-2070-manjaro-linux/111771/14 made by 
-hexengraf
+hexengraf.
+_Hexengraf has almost the same approach but instead of keeping the X server alive in the background, Hexengraf stop the X server that controls the "Hardware Adjustments or Clocks" then respawn to the desired display manager_
 
 

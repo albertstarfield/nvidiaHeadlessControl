@@ -1,10 +1,9 @@
 #!/bin/bash
-#sudo nvidia-xconfig --use-display-device=none
-#allocate display ${AllocatedDisplayNumber} for all of the thing
-AllocatedDisplayNumber=:69
-offsetCoreClock=301 #GPU Core Clock in MHz
-offsetMemoryClock=502 #Memory Offset Clock in MHz
-displayManager=gdm
+set -x
+cd /etc/DeviceOptimization/NvidiaTweaks
+rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
+
+
 #==================================================
 
 
@@ -24,9 +23,7 @@ displayManager=gdm
 
 
 
-set -x
-cd /etc/DeviceOptimization/NvidiaTweaks
-rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
+
 if [ "$1" == 'test' ]; then
 echo "Test mode"
 else
@@ -44,6 +41,7 @@ sleep 0
 nvidiaSettingsCLILoop(){
 sleep 15
 while true; do
+. $(pwd)/HardwareParameters.conf  #reload every loop thus basically allows to be changed by just changing the HardwareParameters.conf without reboot
 nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUGraphicsClockOffset[0]=${offsetCoreClock}
 nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUGraphicsClockOffset[1]=${offsetCoreClock}
 nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUGraphicsClockOffset[2]=${offsetCoreClock}
