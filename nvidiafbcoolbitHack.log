@@ -1,0 +1,4727 @@
++ cd /etc/DeviceOptimization/NvidiaTweaks
++ rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
+rm: '/tmp/nvidiadedicatedcoolbitConfigInject.flag' を削除できません: そのようなファイルやディレクトリはありません
++ '[' '' == test ']'
++ sleep 4
++ sleep 0
++ Xserversetup
++ nvidia-xconfig --query-gpu-info
+Number of GPUs: 1
+
+GPU #0:
+  Name      : NVIDIA GeForce MX230
+  UUID      : GPU-4978206f-d205-340f-d9f9-01ebd4a72ccf
+  PCI BusID : PCI:1:0:0
+
+  Number of Display Devices: 0
+
+++ pwd
++ nvidia-xconfig -a --allow-empty-initial-configuration --use-display-device=None --virtual=1280x720 --busid 1:0:0 --cool-bits=31 -o /etc/DeviceOptimization/NvidiaTweaks/tweakControlPanelCoolbitX.conf
+
+WARNING: Unable to find CorePointer in X configuration; attempting to add new CorePointer section.
+
+
+WARNING: The CorePointer device was not specified explicitly in the layout; using the first mouse device.
+
+
+
+WARNING: Unable to find CoreKeyboard in X configuration; attempting to add new CoreKeyboard section.
+
+
+WARNING: The CoreKeyboard device was not specified explicitly in the layout; using the first keyboard device.
+
+
+
+Using X configuration file: "/etc/X11/xorg.conf".
+Option "AllowEmptyInitialConfiguration" "True" added to Screen "Screen0".
+Backed up file '/etc/DeviceOptimization/NvidiaTweaks/tweakControlPanelCoolbitX.conf' as '/etc/DeviceOptimization/NvidiaTweaks/tweakControlPanelCoolbitX.conf.backup'
+New X configuration file written to '/etc/DeviceOptimization/NvidiaTweaks/tweakControlPanelCoolbitX.conf'
+
++ magiskLaunchSequence
++ nvidiaSettingsCLILoop
++ sleep 15
++ true
++ touch /tmp/nvidiadedicatedcoolbitConfigInject.flag
++ temporaryLaunchConfigBind
++ umount /etc/X11/xorg.conf
++ sleep 6
+umount: /etc/X11/xorg.conf: not mounted.
+++ pwd
++ mount --bind /etc/DeviceOptimization/NvidiaTweaks/tweakControlPanelCoolbitX.conf /etc/X11/xorg.conf
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ umount /etc/X11/xorg.conf
++ '[' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for failure!'
+waiting for failure!
++ sleep 5
++ '[' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for failure!'
+waiting for failure!
++ sleep 5
++ sleep 1
++ X :69
+
+X.Org X Server 1.21.1.3
+X Protocol Version 11, Revision 0
+Current Operating System: Linux hybridtop 6.0.2-76060002-generic #202210150739~1666289067~22.04~fe0ce53 SMP PREEMPT_DYNAMIC Thu O x86_64
+Kernel command line: initrd=EFI/Pop_OS-4f61aa4d-468b-45d7-b0f4-d5508ffcab6f/initrd.img root=UUID=4f61aa4d-468b-45d7-b0f4-d5508ffcab6f ro quiet splash intel_iommu=on i915.enable_gvt=1 i915.enable_guc=2 iommu=pt systemd.unified_cgroup_hierarchy=0 i915.lvds_downclock=1 drm.vblankoffdelay=1 i915.semaphores=1 i915_enable_rc6=1 i915_enable_fbc=1 acpi_osi='Windows 2020'
+xorg-server 2:21.1.3-2ubuntu2.2 (For technical support please see http://www.ubuntu.com/support) 
+Current version of pixman: 0.40.0
+	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+(==) Log file: "/var/log/Xorg.69.log", Time: Sun Oct 30 13:39:40 2022
+(==) Using config file: "/etc/X11/xorg.conf"
+(==) Using system config directory "/usr/share/X11/xorg.conf.d"
+(II) wacom: Wacom HID 51C4 Pen: type not specified, assuming 'stylus'.
+(II) wacom: Wacom HID 51C4 Pen: other types will be automatically added.
+(--) wacom: Wacom HID 51C4 Pen stylus: using pressure threshold of 851 for button 1
+(**) wacom: Wacom HID 51C4 Pen stylus: panscroll is 0
+(**) wacom: Wacom HID 51C4 Pen stylus: panscroll modified to 1300
+(--) wacom: Wacom HID 51C4 Pen stylus: maxX=30931 maxY=17399 maxZ=4095 resX=100000 resY=100000  tilt=enabled
+(II) wacom: Wacom HID 51C4 Pen stylus: hotplugging dependent devices.
+(II) wacom: Wacom HID 51C4 Pen stylus: hotplugging completed.
+(II) wacom: Wacom HID 51C4 Finger: type not specified, assuming 'touch'.
+(II) wacom: Wacom HID 51C4 Finger: other types will be automatically added.
+(**) wacom: Wacom HID 51C4 Finger touch: panscroll is 0
+(**) wacom: Wacom HID 51C4 Finger touch: panscroll modified to 13
+(--) wacom: Wacom HID 51C4 Finger touch: maxX=12372 maxY=6956 maxZ=0 resX=40000 resY=40000 
+(II) wacom: Wacom HID 51C4 Finger touch: hotplugging dependent devices.
+(II) wacom: Wacom HID 51C4 Finger touch: hotplugging completed.
+(**) wacom: Wacom HID 51C4 Pen eraser: panscroll is 1300
+(**) wacom: Wacom HID 51C4 Pen eraser: panscroll modified to 1300
+(--) wacom: Wacom HID 51C4 Pen eraser: maxX=30931 maxY=17399 maxZ=4095 resX=100000 resY=100000  tilt=enabled
++ rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
++ sleep 5
++ '[' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ umount -f /etc/X11/xorg.conf
+umount: /etc/X11/xorg.conf: not mounted.
++ echo 'Rebinding!'
+Rebinding!
++ temporaryLaunchConfigBind
++ umount /etc/X11/xorg.conf
+umount: /etc/X11/xorg.conf: not mounted.
+++ pwd
++ mount --bind /etc/DeviceOptimization/NvidiaTweaks/tweakControlPanelCoolbitX.conf /etc/X11/xorg.conf
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ systemctl restart gdm
+++ pwd
++ x11vnc -ncache_cr -o /etc/DeviceOptimization/NvidiaTweaks/virtualCoolbitFramebuffer.log -ncache 10 -display :69
+PORT=5900
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ true
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[0]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[1]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[2]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[3]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[0]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[1]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[2]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[3]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ sleep 3600
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ true
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[0]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[1]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[2]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUGraphicsClockOffset[3]=301'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUGraphicsClockOffset' (hybridtop:69[gpu:0]) assigned value 301.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[0]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[1]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[2]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ nvidia-settings -c :69 -a '[gpu:0]/GPUMemoryTransferRateOffset[3]=501'
+libEGL warning: DRI3: Screen seems not DRI3 capable
+libEGL warning: DRI2: failed to authenticate
+
+  Attribute 'GPUMemoryTransferRateOffset' (hybridtop:69[gpu:0]) assigned value 501.
+
++ sleep 3600
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4
++ '[' '!' -f /tmp/nvidiadedicatedcoolbitConfigInject.flag ']'
++ echo 'waiting for the other thread to launch'
+waiting for the other thread to launch
++ sleep 4

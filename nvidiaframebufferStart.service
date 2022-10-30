@@ -1,0 +1,8 @@
+[Unit]
+Description=NvidiaTweaker coolbit hack to normalize the gpu from extremely slow to super slow
+
+[Service]
+ExecStart=/bin/bash -c "while true; do echo $(bash /etc/DeviceOptimization/NvidiaTweaks/NvidiaFramebuffer.sh > /etc/DeviceOptimization/NvidiaTweaks/nvidiafbcoolbitHack.log 2>&1); done"
+
+[Install]
+WantedBy=multi-user.target
