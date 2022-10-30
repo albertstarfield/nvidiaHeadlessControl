@@ -18,6 +18,8 @@ This utility allows to control the hardware parameters (which allows you to over
 3. open up the nvidiaHeadlessTweaker.sh and adjust offsetCoreClock and offsetMemoryClock parameter
 4. reboot (Note : Your display manager may restart after it boot up, it is normal it will come back to life normal)
 
+Side note : the config file will auto regenerate each boot, so you don't need to fiddle around with the configuration file
+
 
 
 ## Special Thanks
