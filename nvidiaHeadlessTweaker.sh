@@ -44,15 +44,15 @@ sleep 0
 nvidiaSettingsCLILoop(){
 sleep 15
 while true; do
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUGraphicsClockOffset[0]=301'
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUGraphicsClockOffset[1]=301'
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUGraphicsClockOffset[2]=301'
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUGraphicsClockOffset[3]=301'
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUGraphicsClockOffset[0]=${offsetCoreClock}
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUGraphicsClockOffset[1]=${offsetCoreClock}
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUGraphicsClockOffset[2]=${offsetCoreClock}
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUGraphicsClockOffset[3]=${offsetCoreClock}
 
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUMemoryTransferRateOffset[0]=501'
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUMemoryTransferRateOffset[1]=501'
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUMemoryTransferRateOffset[2]=501'
-nvidia-settings -c ${AllocatedDisplayNumber} -a '[gpu:0]/GPUMemoryTransferRateOffset[3]=501'
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUMemoryTransferRateOffset[0]=${offsetMemoryClock}
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUMemoryTransferRateOffset[1]=${offsetMemoryClock}
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUMemoryTransferRateOffset[2]=${offsetMemoryClock}
+nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:0]/GPUMemoryTransferRateOffset[3]=${offsetMemoryClock}
 sleep 3600
 done
 }
