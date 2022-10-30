@@ -2,8 +2,8 @@
 #sudo nvidia-xconfig --use-display-device=none
 #allocate display ${AllocatedDisplayNumber} for all of the thing
 AllocatedDisplayNumber=:69
-offsetCoreClock=301 #GPU Core Clock
-offsetMemoryClock=502 #Memory Offset Clock
+offsetCoreClock=301 #GPU Core Clock in MHz
+offsetMemoryClock=502 #Memory Offset Clock in MHz
 
 #==================================================
 
