@@ -2,8 +2,8 @@
 set -x
 cd /etc/DeviceOptimization/NvidiaTweaks
 rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
-
-
+#load as global initial parameter
+. $(pwd)/HardwareParameters.conf 
 #==================================================
 
 
