@@ -4,8 +4,8 @@
 set -x
 originPWD=$(pwd)
 cd /etc/DeviceOptimization/NvidiaTweaks
-if [ ${1} == "testenv" ]; then
-${originPWD}
+if [ "${1}" == "testenv" ]; then
+cd ${originPWD}
 fi
 echo "Cleaning Legacy Flag"
 rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
@@ -109,7 +109,7 @@ while true; do
 cat $(pwd)/tweakControlPanelCoolbitX.conf
 X -config $(pwd)/tweakControlPanelCoolbitX.conf -sharevts ${AllocatedDisplayNumber} -logfile $(pwd)/backgroundXorg.log &
 sleep 1
-x11vnc -ncache_cr -o $(pwd)/virtualCoolbitFramebuffer.log -ncache 10 -display ${AllocatedDisplayNumber}
+#x11vnc -ncache_cr -o $(pwd)/virtualCoolbitFramebuffer.log -ncache 10 -display ${AllocatedDisplayNumber} > /dev/null 2
 holdFunction
 sleep 60
 echo "failure Detected"
