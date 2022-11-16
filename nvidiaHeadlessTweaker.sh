@@ -2,8 +2,11 @@
 #sleep 9999
 #exit
 set -x
-
+originPWD=$(pwd)
 cd /etc/DeviceOptimization/NvidiaTweaks
+if [ ${1} == "testenv" ]; then
+${originPWD}
+fi
 echo "Cleaning Legacy Flag"
 rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
 #load as global initial parameter
