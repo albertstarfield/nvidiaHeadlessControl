@@ -94,13 +94,14 @@ nvidiaSettingsCLILoop(){
 sleep 15
 while true; do
 . ${configurationFile} #reload every loop thus basically allows to be changed by just changing the HardwareParameters.conf without reboot
-for a in ${0..${maximumGearState}};do
+for a in $(seq 1 ${maximumGearState});do
 nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:${gpuNumber}]/GPUGraphicsClockOffset[${a}]=${offsetCoreClock}
 done
-for a in ${0..${maximumGearState}};do
+for a in $(seq 1 ${maximumGearState});do
 nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:${gpuNumber}]/GPUMemoryTransferRateOffset[${a}]=${offsetMemoryClock}
 done
-sleep 60
+echo "Entering Loop"
+sleep 30
 done
 }
 
@@ -118,8 +119,7 @@ done
 
 holdFunction(){
 while true; do
-echo "Should be launched"
-sleep 5
+sleep 600
 done
 }
 
