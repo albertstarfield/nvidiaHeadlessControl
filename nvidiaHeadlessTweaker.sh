@@ -11,6 +11,12 @@ echo "Cleaning Legacy Flag"
 rm /tmp/nvidiadedicatedcoolbitConfigInject.flag
 #load as global initial parameter
 
+if [ -z "$(which inotifywait)" ]; then
+    echo "inotifywait not installed."
+    echo "In most distros, it is available in the inotify-tools package."
+    exit 1
+fi
+
 
 ##check configuration
 configurationFile=$(pwd)/HardwareParameters.conf 
@@ -42,8 +48,6 @@ fi
 #==================================================
 
 
-
-
 if [ "$1" == 'test' ]; then
 	echo "Test mode"
 	else
@@ -55,35 +59,21 @@ nvidia-smi
 nvidia-xconfig --query-gpu-info
 #rm $(pwd)/tweakControlPanelCoolbitX.conf*
 if [ ! -f $(pwd)/tweakControlPanelCoolbitX.conf ]; then
-	#nvidia-xconfig -a --probe-all-gpus --force-generate --allow-empty-initial-configuration --use-display-device=None --virtual=1280x720 --busid 1:0:0 --cool-bits=31 -o $(pwd)/tweakControlPanelCoolbitX.conf
 	nvidia-xconfig -a --probe-all-gpus --force-generate --allow-empty-initial-configuration --use-display-device=None --virtual=1280x720 --cool-bits=31 -o $(pwd)/tweakControlPanelCoolbitX.conf
 	# it doesn't have to render anything tho
 fi
 }
 
-
-
-tailxorgLog(){
-while true; do
-	echo "Reading xorg Logs"
-	uptime
-	date
-	#tail -f /var/log/xorg.${AllocatedDisplayNumber}
-	tail -f $(pwd)/backgroundXorg.log
-	sleep 1
-done
-}
-
-
-nvidiaSettingsCLILoop(){
+function nvidiaSettingsCLILoop(){
 echo "Entering inotify..."
-while inotifywait -e modify $(pwd)/HardwareParameters.conf; do
+inotifywait --recursive --monitor --event modify $(pwd)/HardwareParameters.conf | while read changed; do
 	echo "Hardware Parameter conf changed!"
 	doChangeNvidiaSettings
+	backgroundXSequence
 done
 }
 
-doChangeNvidiaSettings(){
+function doChangeNvidiaSettings(){
 	. ${configurationFile} #reload every loop thus basically allows to be changed by just changing the HardwareParameters.conf without reboot
 	for a in $(seq 1 ${maximumGearState});do
 		nvidia-settings -c ${AllocatedDisplayNumber} -a [gpu:${gpuNumber}]/GPUGraphicsClockOffset[${a}]=${offsetCoreClock}
@@ -93,29 +83,16 @@ doChangeNvidiaSettings(){
 	done
 }
 
-backgroundXSequence(){
-while true; do
-	cat $(pwd)/tweakControlPanelCoolbitX.conf
-	X -config $(pwd)/tweakControlPanelCoolbitX.conf -sharevts ${AllocatedDisplayNumber} -logfile $(pwd)/backgroundXorg.log &
-	sleep 1
-	#x11vnc -ncache_cr -o $(pwd)/virtualCoolbitFramebuffer.log -ncache 10 -display ${AllocatedDisplayNumber} > /dev/null 2
-	holdFunction
-	sleep 60
-	echo "failure Detected"
-done
+function backgroundXSequence(){
+cat $(pwd)/tweakControlPanelCoolbitX.conf
+X -config $(pwd)/tweakControlPanelCoolbitX.conf -sharevts ${AllocatedDisplayNumber} -logfile $(pwd)/backgroundXorg.log &
+sleep 1
+echo "failure Detected"
 }
-
-holdFunction(){
-while true; do
-	sleep 600
-done
-}
-
 
 
 #------ Main -------
 Xserversetup
-tailxorgLog &
+backgroundXSequence &
 doChangeNvidiaSettings
-nvidiaSettingsCLILoop &
-backgroundXSequence
+nvidiaSettingsCLILoop
