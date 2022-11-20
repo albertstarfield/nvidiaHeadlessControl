@@ -10,13 +10,23 @@ This daemon/utility creation was heavily inspired by my very Low-end handicapped
 This utility allows to control the hardware parameters (which allows you to overclock, or in theory adjust fan and other parameter) by mocking and spawning nvidia desired coolbits X11 server and /etc/X11/xorg.conf (mounting/binding temporarily it just like magisk like in Android) in the background/headlessly while allowing the display to display the user desired windowing system such as Wayland or etc.  
 
 ## Installation
-0. Install the proprietary Nvidia Driver (was tested in Nvidia version 515)
-1. create directory 
-> $ sudo mkdir /etc/DeviceOptimization/NvidiaTweaks
-2. enable the service
-> $ sudo systemctl enable $(pwd)/nvidiaHeadlessTweaker.service
-3. open up the HardwareParameters.conf and adjust offsetCoreClock and offsetMemoryClock parameter (you can do this after booting up and every changes takes 15 seconds to apply)
-4. reboot (Note : Your display manager may restart after it boot up, it is normal it will come back to life normal)
+0. Install inotify-tools & the proprietary Nvidia Driver (was tested in Nvidia version 470 & 515), and clone this repo
+ 
+  	Example for ubuntu
+  
+		sudo apt install inotify-tools
+		git clone https://github.com/albertstarfield/nvidiaHeadlessControl
+1. create directory
+
+		sudo mkdir /etc/DeviceOptimization/NvidiaTweaks
+2. copy script to directory
+
+		sudo cp nvidiaHeadlessControl/* /etc/DeviceOptimization/NvidiaTweaks
+3. enable the service
+
+		sudo systemctl enable /etc/DeviceOptimization/NvidiaTweaks/nvidiaHeadlessTweaker.service
+4. open up the HardwareParameters.conf and adjust offsetCoreClock and offsetMemoryClock parameter (you can do this after booting up and every changes will be applied immediately)
+5. reboot (Note : Your display manager may restart after it boot up, it is normal it will come back to life normal)
 
 Side note : the config file will auto regenerate each boot, so you don't need to fiddle around with the configuration file
 
