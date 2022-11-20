@@ -11,16 +11,20 @@ This utility allows to control the hardware parameters (which allows you to over
 
 ## Installation
 0. Install inotify-tools & the proprietary Nvidia Driver (was tested in Nvidia version 470 & 515), and clone this repo
+ 
+  	Example for ubuntu
   
-  Example for ubuntu
-> $ sudo apt install inotify-tools
-> $ git clone https://github.com/albertstarfield/nvidiaHeadlessControl
-1. create directory 
-> $ sudo mkdir /etc/DeviceOptimization/NvidiaTweaks
+		sudo apt install inotify-tools
+		git clone https://github.com/albertstarfield/nvidiaHeadlessControl
+1. create directory
+
+		sudo mkdir /etc/DeviceOptimization/NvidiaTweaks
 2. copy script to directory
-> $ sudo cp nvidiaHeadlessControl/* /etc/DeviceOptimization/NvidiaTweaks
+
+		sudo cp nvidiaHeadlessControl/* /etc/DeviceOptimization/NvidiaTweaks
 3. enable the service
-> $ sudo systemctl enable /etc/DeviceOptimization/NvidiaTweaks/nvidiaHeadlessTweaker.service
+
+		sudo systemctl enable /etc/DeviceOptimization/NvidiaTweaks/nvidiaHeadlessTweaker.service
 4. open up the HardwareParameters.conf and adjust offsetCoreClock and offsetMemoryClock parameter (you can do this after booting up and every changes will be applied immediately)
 5. reboot (Note : Your display manager may restart after it boot up, it is normal it will come back to life normal)
 
