@@ -48,6 +48,8 @@ fi
 #==================================================
 
 
+
+
 if [ "$1" == 'test' ]; then
 	echo "Test mode"
 	else
@@ -59,13 +61,16 @@ nvidia-smi
 nvidia-xconfig --query-gpu-info
 #rm $(pwd)/tweakControlPanelCoolbitX.conf*
 if [ ! -f $(pwd)/tweakControlPanelCoolbitX.conf ]; then
+	#nvidia-xconfig -a --probe-all-gpus --force-generate --allow-empty-initial-configuration --use-display-device=None --virtual=1280x720 --busid 1:0:0 --cool-bits=31 -o $(pwd)/tweakControlPanelCoolbitX.conf
 	nvidia-xconfig -a --probe-all-gpus --force-generate --allow-empty-initial-configuration --use-display-device=None --virtual=1280x720 --cool-bits=31 -o $(pwd)/tweakControlPanelCoolbitX.conf
 	# it doesn't have to render anything tho
 fi
 }
 
+
 function nvidiaSettingsCLILoop(){
 echo "Entering inotify..."
+
 inotifywait --recursive --monitor --event modify $(pwd)/HardwareParameters.conf | while read changed; do
 	echo "Hardware Parameter conf changed!"
 	doChangeNvidiaSettings
@@ -84,15 +89,22 @@ function doChangeNvidiaSettings(){
 }
 
 function backgroundXSequence(){
-cat $(pwd)/tweakControlPanelCoolbitX.conf
-X -config $(pwd)/tweakControlPanelCoolbitX.conf -sharevts ${AllocatedDisplayNumber} -logfile $(pwd)/backgroundXorg.log &
-sleep 1
-echo "failure Detected"
+while true; do
+        if xdpyinfo -display ${AllocatedDisplayNumber} > /dev/null 2>&1; then
+        echo "NvidiaHeadlessTweaker Watchdog : Background X server is running"
+	else
+        date
+        cat $(pwd)/tweakControlPanelCoolbitX.conf
+	X -config $(pwd)/tweakControlPanelCoolbitX.conf -sharevts ${AllocatedDisplayNumber} -logfile $(pwd)/backgroundXorg.log 
+	fi
+	sleep 1
+done
 }
 
 
 #------ Main -------
 Xserversetup
+#tailxorgLog &
 backgroundXSequence &
 doChangeNvidiaSettings
 nvidiaSettingsCLILoop
